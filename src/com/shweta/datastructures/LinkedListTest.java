@@ -55,15 +55,18 @@ public class LinkedListTest {
 	@Test
 	public void test_remove_on_nonempty_list() {
 
+		// Create list with four elements
 		final LinkedList list = new LinkedList();
 		list.add("shweta");
 		list.add("darsh");
 		list.add("mona");
 		list.add("sheila");
 
+		// remove mona's bitch ass
 		Assert.assertEquals("mona", list.remove(2));
 		Assert.assertEquals(3, list.size());
 
+		// test removing an index that doesn't exist
 		try {
 			list.remove(7);
 			Assert.fail("Should've thrown an exception");
